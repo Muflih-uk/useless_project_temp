@@ -15,12 +15,16 @@ class NotificationService {
     const InitializationSettings initializationSettings =
         InitializationSettings(android: androidInitSettings);
 
-    await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+    await flutterLocalNotificationsPlugin.initialize(
+      initializationSettings,
+      onDidReceiveNotificationResponse: (details) {
+        // Handle notification tap here if needed
+      },
+    );
   }
 
   Future<void> showFunnyNotification(String message) async {
-    const AndroidNotificationDetails androidDetails =
-        AndroidNotificationDetails(
+    const AndroidNotificationDetails androidDetails = AndroidNotificationDetails(
       'funny_channel',
       'Funny Notifications',
       channelDescription: 'Sends funny messages when app is in background',

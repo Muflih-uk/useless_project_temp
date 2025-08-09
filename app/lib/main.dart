@@ -4,9 +4,11 @@ import 'package:provider/provider.dart';
 import 'core/notifications/notification_service.dart';
 import 'features/home/screens/home_screen.dart';
 
+final NotificationService notificationService = NotificationService();
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await NotificationService().init();
+  await notificationService.init();
 
   runApp(
     MultiProvider(
@@ -48,9 +50,11 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused || state == AppLifecycleState.inactive) {
-      final randomMessage =
-          (funnyMessages..shuffle()).first; 
-      NotificationService().showFunnyNotification(randomMessage);
+      final randomMessage = (funnyMessages..shuffle()).first;
+      // Delay to ensure Android context is still valid
+      Future.delayed(const Duration(milliseconds: 300), () {
+        notificationService.showFunnyNotification(randomMessage);
+      });
     }
   }
 
