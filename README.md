@@ -5,13 +5,12 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Redux
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Mohammed Fahad - Government Engineering College Palakkad
+- Member 2: Mohammed Muflih - Government Engineering College Palakkad
 
 ### Project Description
 [2-3 lines about what your project does]
