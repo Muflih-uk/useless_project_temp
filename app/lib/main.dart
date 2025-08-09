@@ -57,6 +57,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Funny Notification App',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const HomeScreen(),
