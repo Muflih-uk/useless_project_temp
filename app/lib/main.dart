@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused || state == AppLifecycleState.inactive) {
       final randomMessage =
-          (funnyMessages..shuffle()).first; // Pick random funny message
+          (funnyMessages..shuffle()).first; 
       NotificationService().showFunnyNotification(randomMessage);
     }
   }
