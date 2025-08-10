@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "831817241834",
+    "project_id": "kunhonee-povalle",
+    "storage_bucket": "kunhonee-povalle.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831817241834:android:ee021aee8f0d9a5c3f7393",
+        "android_client_info": {
+          "package_name": "com.example.frontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJqaLhO2TfQTPPnkBP_gXA6c77A2bapl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
